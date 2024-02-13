@@ -3,20 +3,20 @@
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 h2,
 h3 {
-    color: #00a2c6;
+    color: #0D215D;
 }
 
 footer {
     padding: 20px;
     color: white;
-    background-color: #00a2c6;
+    background-color: #0D215D;
     text-align: center;
     font-weight: bold;
 }
@@ -30,6 +30,10 @@ nav a {
 
 nav a:hover {
     font-weight: bold;
+}
+
+.profile {
+    background-color: white;
 }
 
 .profile header {
@@ -49,16 +53,30 @@ nav a:hover {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 20px;
 }
 
 .jumbotron {
+    position: relative;
     font-size: 20px;
     padding: 60px;
-    background-color: #00c8eb;
     text-align: center;
     color: white;
+    overflow: hidden;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../image/drow_ranger.jpg');
+    background-size: cover;
+    opacity: 0.9;
+    z-index: -1;
 }
 
 nav ul {
@@ -72,13 +90,14 @@ nav li {
 }
 
 nav {
-    background-color: #00a2c6;
+    background-color: #0D215D;
     padding: 5px;
     position: sticky;
     top: 0;
 }
 
 main {
+    background-color: #EFF4FE;
     padding: 20px;
     display: flex;
     gap: 1.5rem;
@@ -97,6 +116,49 @@ aside {
 
 header {
     display: inline;
+}
+
+article {
+    background-color: white;
+}
+
+article img {
+    border-radius: 12px;
+}
+
+table {
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th,
+td {
+    vertical-align: top;
+}
+
+.status h3 {
+    text-align: center;
+}
+
+.ability-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.ability-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ability-item img {
+    width: 128px;
+    margin-right: 1.2rem;
+}
+
+.ability-item h3 {
+    margin-top: 0px;
 }
 
 @media screen and (max-width: 1200px) {
